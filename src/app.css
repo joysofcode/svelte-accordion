@@ -1,0 +1,21 @@
+@import '@fontsource/manrope';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	display: grid;
+	place-content: center;
+	font-family: 'Manrope', sans-serif;
+	font-size: 1.5rem;
+	color: hsl(220 10% 98%);
+	background-color: hsl(220 10% 10%);
+}
