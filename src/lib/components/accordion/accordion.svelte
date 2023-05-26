@@ -2,10 +2,10 @@
 	import { setAccordionOptions } from './context'
 
 	// by default more than one accordion can be open
-	export let colapse = false
+	export let collapse = false
 
 	// the context API avoids passing data through components as props
-	setAccordionOptions({ colapse })
+	setAccordionOptions({ collapse })
 </script>
 
 <div class="accordion">

@@ -9,7 +9,7 @@
 	const componentId = crypto.randomUUID()
 
 	// get the accordion options using the context api
-	const { colapse, activeComponentId } = getAccordionOptions()
+	const { collapse, activeComponentId } = getAccordionOptions()
 
 	function setActive() {
 		// update the store value in the context
@@ -21,16 +21,16 @@
 	}
 
 	function handleClick() {
-		// if `colapse` is passed only one item can be active
-		colapse ? setActive() : toggleOpen()
+		// if `collapse` is passed only one item can be active
+		collapse ? setActive() : toggleOpen()
 	}
 
 	// the accordion item to be open by default
-	$: open && colapse && setActive()
+	$: open && collapse && setActive()
 	// compare if the active id matches the component id
 	$: isActive = $activeComponentId === componentId
-	// if `colapse`, set one item as active, otherwise use `open`
-	$: isOpen = colapse ? isActive : open
+	// if `collapse`, set one item as active, otherwise use `open`
+	$: isOpen = collapse ? isActive : open
 </script>
 
 <div class="accordion-item">
