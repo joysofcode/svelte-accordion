@@ -44,9 +44,7 @@
 			<slot name="title" />
 		</div>
 
-		<div class="accordion-caret" class:open={isOpen} class:close={!isOpen}>
-			👉️
-		</div>
+		<div class="accordion-caret" class:open={isOpen}>👉️</div>
 	</button>
 
 	{#if isOpen}
@@ -83,17 +81,15 @@
 		background-color: var(--accordion-hover, hsl(220 20% 20%));
 	}
 
+	.accordion-caret {
+		transition: rotate 0.3s ease;
+	}
+
 	.accordion-content {
 		padding: var(--accordion-content-padding, 1rem);
 	}
 
 	.open {
 		rotate: 90deg;
-		transition: rotate 0.3s ease;
-	}
-
-	.close {
-		rotate: 0deg;
-		transition: rotate 0.3s ease;
 	}
 </style>
